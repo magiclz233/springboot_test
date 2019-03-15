@@ -17,6 +17,8 @@
 
     <modules>
         <module>springboot_web</module>
+        <module>springboot_jsp</module>
+        <module>springboot_thymeleaf</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,6 +38,10 @@
     <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
     </dependency>
 </dependencies>
     <!--该插件作用是打一个可运行的包，

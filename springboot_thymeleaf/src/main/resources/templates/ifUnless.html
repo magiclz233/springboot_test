@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>thymeleaf_hello</title>
+</head>
+<body>
+<h1>If/Unless</h1>
+<a th:if="${flag eq 'yes'}"  th:href="@{http://www.baidu.com}"> 百度 </a>
+<br/>
+<a th:unless="${flag eq 'no'}" th:href="@{http://www.imooc.com/}" >慕课网</a>
+<p th:if="${flag eq 'yes'}" th:text="NIMENDE"></p>
+<p>gt：great than（⼤大于）<br>
+    ge：great equal（⼤大于等于）<br>
+    eq：equal（等于）<br>
+    lt：less than（⼩小于）<br>
+    le：less equal（⼩小于等于）<br>
+    ne：not equal（不不等于）</p>
+</body>
+</html>

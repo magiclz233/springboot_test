@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>for循环</h2>
+    <table>
+        <tr th:each="user,iterStat:${users}">
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.password}"></td>
+            <td th:text="${user.age}"></td>
+            <td th:text="${iterStat.index}"></td>
+            <td th:text="${iterStat.count}"></td>
+            <td th:text="${iterStat.size}"></td>
+            <td th:text="${iterStat.current}"></td>
+            <td th:text="${iterStat.even}"></td>
+            <td th:text="${iterStat.odd}"></td>
+            <td th:text="${iterStat.first}"></td>
+            <td th:text="${iterStat.last}"></td>
+        </tr>
+    </table>
+
+<p>
+    <h3>iterStat 称作状态变量量，属性有：</h3><br>
+    index，当前迭代对象的 index（从 0 开始计算）；<br>
+    count，当前迭代对象的 index（从 1 开始计算）；<br>
+    size，被迭代对象的⼤大⼩小；<br>
+    current，当前迭代变量量；<br>
+    even/odd，布尔值，当前循环是否是偶数/奇数（从 0 开始计算）；<br>
+    first，布尔值，当前循环是否是第⼀一个；<br>
+    last，布尔值，当前循环是否是最后⼀一个。
+</p>
+
+<h3>三目运算符</h3>
+<p th:text="${users[0].username}"></p>
+<p th:text="${users[0].age gt 30 ? '中年':'年轻'}"></p>
+<p>gt：great than（⼤大于）<br>
+    ge：great equal（⼤大于等于）<br>
+    eq：equal（等于）<br>
+    lt：less than（⼩小于）<br>
+    le：less equal（⼩小于等于）<br>
+    ne：not equal（不不等于）</p>
+</body>
+</html>
