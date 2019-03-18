@@ -21,6 +21,8 @@
         <module>springboot_thymeleaf</module>
         <module>springboot_thymeleaf_layout</module>
         <module>springboot_thymeleaf_fileuploder</module>
+        <module>springboot_restful</module>
+        <module>springboot_fastdfs</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
