@@ -6,5 +6,19 @@
 </head>
 <body>
     <p th:text="${message}">nmsl</p>
+
+    <h1>内联</h1>
+    <div th:inline="text">
+        <h2>Hello,[[${message}]]!</h2>
+    </div>
+    <h1>不使用内联</h1>
+    <p th:text="'Hello,'+${message}+'!'"></p>
+
+    <h3>⻚页⾯面会先跳出⼀一个 alert 提示框，然后再展示使⽤用内联和不不使⽤用内联的⻚页⾯面内容。</h3>
+
 </body>
+<script th:inline="javascript">
+    var name = [[${message}]] + ', NMSL';
+    alert(name);
+</script>
 </html>

@@ -19,6 +19,8 @@
         <module>springboot_web</module>
         <module>springboot_jsp</module>
         <module>springboot_thymeleaf</module>
+        <module>springboot_thymeleaf_layout</module>
+        <module>springboot_thymeleaf_fileuploder</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <h3>时间格式化</h3>
+    <p th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}"></p>
+   <h3>创建当前时间 精确到天</h3>
+   <p th:text="${#dates.createToday()}">neo</p>
+     <h3>创建当前时间精确到秒</h3>
+   <p th:text="${#dates.createNow()}">neo</p>
+     <h3>判断是否为空</h3>
+   <p th:text="${#strings.isEmpty(userName)}">userName</p>
+      <h3>判断 list 是否为空</h3>
+   <p th:text="${#strings.listIsEmpty(users)}">userName</p>
+  <h3>输出字符串长度</h3>
+   <p th:text="${#strings.length(userName)}">userName</p>
+    <h3>拼接字符串</h3>
+   <p th:text="${#strings.concat(userName,userName,userName)}"></p>
+    <h3>创建自定长度的字符串</h3>
+   <p th:text="${#strings.randomAlphanumeric(count)}">userName</p>
+    <p th:text="${date}"></p>
+</body>
+</html>

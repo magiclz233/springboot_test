@@ -5,7 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -49,6 +51,23 @@ public class ThymeleafController {
         map.addAttribute("sex", "man");
         return "switch";
     }
+
+    @RequestMapping("/http")
+    public String httpChoose(HttpServletRequest request) {
+        request.setAttribute( "request","i am request" );
+        request.getSession().setAttribute( "session","i am session" );
+        return "http";
+    }
+
+    @RequestMapping("/utility")
+    public String utility(ModelMap map) {
+        map.addAttribute( "userName","magic" );
+        map.addAttribute( "users",getUserList() );
+        map.addAttribute( "count",12 );
+        map.addAttribute( "date",new Date(  ) );
+        return "utility";
+    }
+
 
 
 
