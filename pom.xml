@@ -25,7 +25,6 @@
         <module>springboot_fastdfs</module>
         <module>springboot_websocket</module>
         <module>springboot_jdbc</module>
-        <module>springboot_mybatis_xml</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
