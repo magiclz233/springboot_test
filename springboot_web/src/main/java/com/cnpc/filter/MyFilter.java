@@ -1,7 +1,5 @@
 package com.cnpc.filter;
 
-import com.sun.deploy.net.HttpRequest;
-
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;

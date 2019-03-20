@@ -25,6 +25,7 @@
         <module>springboot_fastdfs</module>
         <module>springboot_websocket</module>
         <module>springboot_jdbc</module>
+        <module>springboot_jpa</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,10 +46,7 @@
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
     </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-devtools</artifactId>
-    </dependency>
+
 </dependencies>
     <!--该插件作用是打一个可运行的包，
     必须要写在需要打包的项目里。这里的父模块不需要打包运行，所以删掉该插件。-->

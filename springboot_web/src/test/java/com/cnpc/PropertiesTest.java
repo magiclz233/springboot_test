@@ -2,7 +2,6 @@ package com.cnpc;
 
 import com.cnpc.comm.CnpcProperties;
 import com.cnpc.comm.OtherProperties;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,7 +14,7 @@ import javax.annotation.Resource;
 @SpringBootTest
 public class PropertiesTest {
 
-    @Value("${neo.title}")
+    @Value("${cnpc.title}")
     private String title;
     @Resource
     private CnpcProperties cnpcProperties;

@@ -42,7 +42,7 @@ public class ThymeleafController {
     public String url(ModelMap map) {
         map.addAttribute("type", "link");
         map.addAttribute("pageId", "springcloud/2017/09/11/");
-        map.addAttribute("img", "http://www.ityouknow.com/assets/images/neo.jpg");
+        map.addAttribute("img", "http://www.ityouknow.com/assets/images/cnpc.jpg");
         return "url";
     }
 
