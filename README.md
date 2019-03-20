@@ -5,6 +5,6 @@ https://github.com/ityouknow/spring-boot-leaning/tree/gitbook_column2.0
 ****************************************************************
 **springboot与mybatis练习在其他仓库中**
 链接如下：
-https://github.com/magiclz233/springboot_mybatis_test1
+https://github.com/magiclz233/springboot_mybatis_test1 
 还在学习当中，后续会不断更新自己的学习过程！  
 共勉
