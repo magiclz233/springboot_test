@@ -27,13 +27,13 @@ public class UserRepositoryTests {
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
 		String formattedDate = dateFormat.format(date);
 		
-		userRepository.save(new User("aa", "aa123456","aa@1226.com", "aa",  formattedDate));
-		userRepository.save(new User("bb", "bb123456","bb@1326.com", "bb",  formattedDate));
-		userRepository.save(new User("cc", "cc123456","cc@1426.com", "cc",  formattedDate));
+//		userRepository.save(new User("aa", "aa123456","aa@1226.com", "aa",  formattedDate));
+//		userRepository.save(new User("bb", "bb123456","bb@1326.com", "bb",  formattedDate));
+//		userRepository.save(new User("cc", "cc123456","cc@1426.com", "cc",  formattedDate));
+		for (int i = 0; i < 20 ; i++) {
+			userRepository.save( new User( "magic"+i,"password"+i,"magic"+i+"@163.com","test"+i,formattedDate ) );
+		}
 
-//		Assert.assertEquals(3, userRepository.findAll().size());
-//		Assert.assertEquals("bb", userRepository.findByUserNameOrEmail("bb", "bb@126.com").getNickName());
-//		userRepository.delete(userRepository.findByUserName("aa"));
 	}
 
 
@@ -58,23 +58,23 @@ public class UserRepositoryTests {
 
 	@Test
 	public void testCustomSql() {
-		userRepository.modifyById("neo",3L);
+		//userRepository.modifyById("neo",3L);
 		//userRepository.deleteById(3L);
-		User byEmail = userRepository.findByEmail("ff@126.com");
+		User byEmail = userRepository.findByEmail("aa@1226.com");
 		System.out.println(byEmail.toString());
 	}
 
 
 	@Test
 	public void testPageQuery()  {
-		int page=2,size=2;
-		Sort sort = new Sort(Sort.Direction.DESC, "id");
+		int page=2,size=3;
+		Sort sort = new Sort(Sort.Direction.ASC, "id");
 		Pageable pageable = PageRequest.of(page, size, sort);
 		Page<User> all = userRepository.findALL(pageable);
 		for (User user:all) {
 			System.out.println(user.toString());
 		}
-		userRepository.findByNickName("aa", pageable);
+		//userRepository.findByNickName("aa", pageable);
 	}
 
 }

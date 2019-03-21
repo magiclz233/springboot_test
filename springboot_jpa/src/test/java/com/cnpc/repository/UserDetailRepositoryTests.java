@@ -47,7 +47,7 @@ public class UserDetailRepositoryTests {
 
 	@Test
 	public void testUserInfo()  {
-		List<UserInfo> userInfos=userDetailRepository.findUserInfo("钓鱼");
+		List<UserInfo> userInfos=userDetailRepository.findUserInfo("吃鸡游戏");
 		for (UserInfo userInfo:userInfos){
 			System.out.println("userInfo: "+userInfo.getUserName()+"-"+userInfo.getEmail()+"-"+userInfo.getHobby()+"-"+userInfo.getIntroduction());
 		}
