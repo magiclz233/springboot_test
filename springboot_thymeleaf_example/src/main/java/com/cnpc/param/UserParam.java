@@ -1,11 +1,13 @@
 package com.cnpc.param;
 
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
+@Data
 public class UserParam {
     private long id;
     @NotEmpty(message="姓名不能为空")

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+</head>
+<body class="container">
+<br/>
+<h1>用户列表</h1>
+<br/><br/>
+<div class="with:80%">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>User Name(用户名)</th>
+                <th>Password(密码)</th>
+                <th>Age(年龄)</th>
+                <th>Reg Time(注册时间)</th>
+                <th>Edit(修改)</th>
+                <th>Delete(删除)</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <th scope="row" th:text="${user.id}">id</th>
+            <td th:text="${user.userName}">userName</td>
+            <td th:text="${user.passWord}">passWord</td>
+            <td th:text="${user.age}">age</td>
+            <td th:text="${#dates.format(user.regTime,'yyyy-MM-dd HH:mm:ss')}"></td>
+            <td><a th:href="@{/toEdit(id=${user.id})}">修改</a></td>
+            <td><a th:href="@{/delete(id=${user.id})}" onclick="return confirm('确定删除该用户？')">删除</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <div th:include="page :: pager" th:remove="tag"></div>
+</div>
+<div class="form-group">
+    <div class="col-sm-2 control-label">
+        <a href="/toAdd" th:href="@{/toAdd}" class="btn btn-info">add</a>
+    </div>
+</div>
+</body>
+</html>

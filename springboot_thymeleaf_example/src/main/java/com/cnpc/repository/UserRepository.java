@@ -8,11 +8,11 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface UserRepository extends JpaRepository<User,Integer> {
     @Query("select u from User u")
-    Page<User> pageList(Pageable pageable);
+    Page<User> findList(Pageable pageable);
 
-    User findById(int id);
+    User findById(Long id);
 
     User findByUserName(String username);
 
-    void deleteById(int id);
+    void deleteById(Long id);
 }
