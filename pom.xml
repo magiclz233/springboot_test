@@ -28,6 +28,7 @@
         <module>springboot_jpa</module>
         <module>springboot_jpa_multi</module>
         <module>springboot_thymeleaf_example</module>
+        <module>springboot_redis</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
