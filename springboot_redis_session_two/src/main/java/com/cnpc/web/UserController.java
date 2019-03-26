@@ -1,7 +1,7 @@
 package com.cnpc.web;
 
 import com.cnpc.model.User;
-import com.cnpc.repository.User1Repository;
+import com.cnpc.repositoty.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,10 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-public class User1Controller {
-
+public class UserController {
     @Autowired
-    private User1Repository userRepository;
+    private UserRepository userRepository;
 
     @RequestMapping(value = "/setSession")
     public Map<String, Object> setSession (HttpServletRequest request){
@@ -59,5 +58,4 @@ public class User1Controller {
         request.getSession().removeAttribute("user");
         return "loginout successful!";
     }
-
 }

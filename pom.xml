@@ -30,7 +30,7 @@
         <module>springboot_thymeleaf_example</module>
         <module>springboot_redis</module>
         <module>springboot_redis_session</module>
-        <module>springboot_redis_session1</module>
+        <module>springboot_redis_session_two</module>
         <module>springboot_cache</module>
     </modules>
     <properties>
