@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+//redis 操作封装
 @Service
 public class RedisService {
     private Logger logger = LoggerFactory.getLogger(RedisService.class);
