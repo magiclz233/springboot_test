@@ -33,6 +33,8 @@
         <module>springboot_redis_session_two</module>
         <module>springboot_cache</module>
         <module>springboot_activemq</module>
+        <module>springboot_rabbitmq</module>
+        <module>springboot_security</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
