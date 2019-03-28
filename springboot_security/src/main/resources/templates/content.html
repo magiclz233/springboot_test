@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>content</h1>
+<p>登陆后才可以看的页面</p>
+<form th:action="@{/logout}" method="post">
+    <button type="submit">退出</button>
+</form>
+</body>
+</html>
