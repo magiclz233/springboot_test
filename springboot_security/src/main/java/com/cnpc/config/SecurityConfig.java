@@ -26,7 +26,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     protected void configure (HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers( "/","/home" ).permitAll()
+                .antMatchers( "/","/resources/**" ).permitAll()
+                .antMatchers( "/admin/**" ).hasRole( "ADMIN" )
+                .antMatchers( "/content/**" )
+                .access( "hasRole('ADMIN') or hasRole('USER')" )
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -44,8 +47,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth)throws Exception{
         auth.inMemoryAuthentication()
                 .passwordEncoder( new BCryptPasswordEncoder(  ) )
+                .withUser( "user" )
+                .password( new BCryptPasswordEncoder(  ).encode( "123456" ) )
+                .roles( "USER" )
+                .and()
                 .withUser( "admin" )
                 .password( new BCryptPasswordEncoder(  ).encode( "123456" ) )
-                .roles( "ADMIN" );
+                .roles( "ADMIN","USER" );
+
     }
 }

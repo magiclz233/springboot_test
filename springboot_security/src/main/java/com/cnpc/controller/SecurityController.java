@@ -1,5 +1,6 @@
 package com.cnpc.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -10,7 +11,7 @@ public class SecurityController {
     public String index(){
         return "index";
     }
-
+    @PreAuthorize( "hasAnyAuthority('USER','ADMIN')" )
     @RequestMapping("/content")
     public String content(){
         return "content";
@@ -21,5 +22,11 @@ public class SecurityController {
         return "login";
     }
 
+    @PreAuthorize( "hasAuthority('ADMIN')" )
+    @RequestMapping("/admin")
+    public String admin(){
+        return "admin";
+
+    }
 
 }
