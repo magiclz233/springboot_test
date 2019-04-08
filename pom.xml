@@ -35,6 +35,8 @@
         <module>springboot_activemq</module>
         <module>springboot_rabbitmq</module>
         <module>springboot_security</module>
+        <module>springboot_mongodb</module>
+        <module>springboot_mongodb_template</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
