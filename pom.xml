@@ -37,6 +37,7 @@
         <module>springboot_security</module>
         <module>springboot_mongodb</module>
         <module>springboot_mongodb_template</module>
+        <module>springboot_elasticsearch</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
